@@ -1,0 +1,80 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div id="page-content" class="page-content">
+		<div class="container">
+			<div class="row">
+
+				
+				<div id="page-main-content" class="page-main-content">
+					
+<article id="post-3505" class="post-3505 page type-page status-publish hentry">
+	<div class="wpb-content-wrapper"><div id="tm-row-682375026e76a" class="vc_row vc_row-outer vc_row-fluid"><div id="tm-column-682375026edde" class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="tm-spacer" id="tm-spacer-682375026f010"></div>
+</div></div></div></div><div id="tm-row-682375026f17c" class="vc_row vc_row-outer vc_row-fluid"><div id="tm-column-682375026f3f8" class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-primary fw-bold">QUALITY</h2>
+    <hr class="double-line my-3">
+
+   <div class="container my-5">
+  <div class="row align-items-center">
+    
+    <!-- Left Column: Text -->
+    <div class="col-md-8">
+      <h2 class="mb-3">QUALITY</h2>
+      <div class="double-line mb-4"></div>
+      <p><strong>Quality of our products and Service satisfaction of our customer is our prime focus.</strong></p>
+      <p><strong>Alpine FIBC</strong> maintain quality right from the selection of raw material to the final delivery, the Quality Assurance team ensures that product meet all the required quality standards followed at each and every stage.</p>
+      <p>We focus on hygiene and cleanliness to ensure Food and <strong>Pharma grade FIBCs</strong> that are sanitized and free from dust, germs and pollutants.</p>
+
+      <p class="fw-bold">At different levels of manufacturing process, our in-house “Quality Assurance System” strictly follows:</p>
+      <ul class="list-unstyled">
+        <li><i class="bi bi-patch-check-fill text-primary me-2"></i> Raw material testing – Certified by Major raw material manufacturers</li>
+        <li><i class="bi bi-patch-check-fill text-primary me-2"></i> Tape – Yarn width, denier of the yarn, strength and elongation</li>
+        <li><i class="bi bi-patch-check-fill text-primary me-2"></i> Fabric – Size of fabric, mesh, strength, elongation, weight of fabric in GSM</li>
+        <li><i class="bi bi-patch-check-fill text-primary me-2"></i> Cutting – Weaving defects, size of cutting</li>
+        <li><i class="bi bi-patch-check-fill text-primary me-2"></i> Stitching – seam strength, weight, cleaning and printing matter</li>
+        <li><i class="bi bi-patch-check-fill text-primary me-2"></i> Packing – Compacting and proper bailing</li>
+      </ul>
+
+      <p>We fulfill the specific requirement of customer through most advance machinery, advance equipped quality control laboratory, highly experienced and expertise staff, and approved superior food grade polymers and other additive materials.</p>
+    </div>
+
+    <!-- Right Column: Image -->
+    <div class="col-md-4 text-center">
+      <img src="{% static 'images/quality.jpg' %}" alt="Quality Assurance" class="img-fluid quality-img">
+    </div>
+
+  </div>
+</div>
+
+
+    <p class="mt-4">We fulfill the specific requirement of customer through most advance machinery, advance equipped quality control laboratory, highly experienced and expertise staff, and approved superior food grade polymers and other additive materials.</p>
+  </div>
+</section>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+
+  
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const link = document.querySelector('.hover-dropdown > a');
+
+    if (link) {
+      link.addEventListener('click', function (e) {
+        // Prevent Bootstrap dropdown toggle
+        e.stopPropagation();
+        // Go to products.html
+        window.location.href = this.getAttribute('href');
+      });
+    }
+  });
+</script>
+{% endblock %}
+

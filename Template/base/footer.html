@@ -1,0 +1,50 @@
+{% load static %}
+
+<footer class="bg-primary text-white pt-5">
+  <div class="container">
+    <div class="row">
+      <!-- Certification -->
+      <div class="col-md-4 mb-4">
+        <h6 class="text-uppercase fw-bold mb-3">Certification</h6>
+        <img src="{% static 'images/certificate.png' %}" alt="Certification" class="img-fluid">
+      </div>
+
+      <!-- Main Menu -->
+      <div class="col-md-4 mb-4">
+        <h6 class="text-uppercase fw-bold mb-3">Main Menu</h6>
+        <ul class="list-unstyled">
+          <li><a href="{% url 'about_view' %}" class="text-white text-decoration-none d-block mb-1">About Us</a></li>
+          <li><a href="{% url 'quality' %}" class="text-white text-decoration-none d-block mb-1">Quality</a></li>
+          <li><a href="{% url 'infrastructure' %}" class="text-white text-decoration-none d-block mb-1">Infrastructure</a></li>
+          <li><a href="{% url 'certification' %}" class="text-white text-decoration-none d-block mb-1">Certification</a></li>
+          <li><a href="{% url 'blog' %}" class="text-white text-decoration-none d-block mb-1">Blog</a></li>
+          <li><a href="{% url 'contact' %}" class="text-white text-decoration-none d-block mb-1">Contact us</a></li>
+          <li><a href="{% url 'career' %}" class="text-white text-decoration-none d-block mb-1">Career</a></li>
+          <li><a href="#" class="text-white text-decoration-none d-block mb-1">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Contact Us -->
+      <div class="col-md-4 mb-4">
+        <h6 class="text-uppercase fw-bold mb-3">Quick Contact Us</h6>
+        <p class="mb-1 fw-semibold">Alpine Fibc Pvt Ltd</p>
+        <p class="mb-2">
+          <i class="bi bi-geo-alt-fill me-1"></i>
+          A 1206-1207 "The Capital"<br>
+          Nr. Hetarth Party Plot Science City Road,<br>
+          Sola, Ahmedabad, Gujarat–380060, India.
+        </p>
+        <p class="mb-1"><i class="bi bi-envelope-fill me-1"></i> info@alpinefibc.com</p>
+        <p class="mb-2">sales@alpinefibc.com</p>
+        <p><i class="bi bi-telephone-fill me-1"></i> +91 90990 82104</p>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="text-center border-top border-white pt-3 mt-3 pb-4 small">
+      COPYRIGHTS © 2025, <strong>ALPINE FIBC PVT. LTD.</strong> | ALL RIGHTS RESERVED. POWERED BY 
+      <a href="#" class="text-white text-decoration-none"><strong>8WEBCOM.COM</strong></a>
+    </div>
+  </div>
+</footer>
+

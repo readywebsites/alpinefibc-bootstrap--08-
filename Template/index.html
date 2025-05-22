@@ -1,0 +1,323 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+ <section class="banner-wrapper text-center">
+  <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/banner14.jpg' %}" class="d-block w-100" alt="Banner">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="display-5">Welcome To ALPINE FIBC PVT.LTD.</h1>
+          <p class="lead">Leading manufacturer and exporter of a wide range of FIBC/Big Bags.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/banner21.jpg' %}" class="d-block w-100" alt="Banner 2">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="display-5">Our Commitment to Quality</h1>
+          <p class="lead">Delivering high-quality FIBC solutions worldwide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/banner22.jpg' %}" class="d-block w-100" alt="Banner 3">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="display-5">Sustainable Solutions</h1>
+          <p class="lead">Eco-friendly and durable Big Bags for all industries.</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Industries We Serve</h2>
+    <div class="row text-center g-4">
+      <!-- Repeat this col-md-2 block for each industry -->
+      <div class="col-md-2">
+        <img src="{% static 'images/chemical.png' %}" alt="Chemical" class="img-fluid mb-2">
+        <h6 class="fw-bold">CHEMICAL</h6>
+        <p>Chemical</p>
+        <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
+      </div>
+      <div class="col-md-2">
+        <img src="{% static 'images/pharmaceutical.jpg' %}" alt="Pharmaceutical" class="img-fluid mb-2">
+        <h6 class="fw-bold">PHARMACEUTICAL</h6>
+        <p>Pharmaceutical</p>
+        <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
+      </div>
+      <div class="col-md-2">
+        <img src="{% static 'images/fertilizers.jpg' %}" alt="Fertilizers" class="img-fluid mb-2">
+        <h6 class="fw-bold">FERTILIZERS</h6>
+        <p>Fertilizers</p>
+        <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
+      </div>
+      <div class="col-md-2">
+        <img src="{% static 'images/food.jpg' %}" alt="Food" class="img-fluid mb-2">
+        <h6 class="fw-bold">FOOD</h6>
+        <p>Food Products</p>
+        <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
+      </div>
+      <div class="col-md-2">
+        <img src="{% static 'images/fiberglass.jpg' %}" alt="Fiberglass" class="img-fluid mb-2">
+        <h6 class="fw-bold">FIBERGLASS</h6>
+        <p>Fiberglass</p>
+        <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
+      </div>
+      <div class="col-md-2">
+        <img src="{% static 'images/grains.jpg' %}" alt="Grains" class="img-fluid mb-2">
+        <h6 class="fw-bold">GRAINS</h6>
+        <p>Grains</p>
+        <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
+      </div>
+      <div class="col-md-2">
+        <img src="{% static 'images/pigment1.jpg' %}" alt="Pigments" class="img-fluid mb-2">
+        <h6 class="fw-bold">PIGMENTS</h6>
+        <p>Pigments</p>
+        <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
+      </div>
+      <div class="col-md-2">
+        <img src="{% static 'images/plastics.jpg' %}" alt="Plastics" class="img-fluid mb-2">
+        <h6 class="fw-bold">PLASTICS</h6>
+        <p>Plastics</p>
+        <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
+      </div>
+      <div class="col-md-2">
+        <img src="{% static 'images/construction.jpg' %}" alt="Construction" class="img-fluid mb-2">
+        <h6 class="fw-bold">CONSTRUCTION</h6>
+        <p>Construction</p>
+        <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
+      </div>
+      <div class="col-md-2">
+        <img src="{% static 'images/refractories.jpg' %}" alt="Refractories" class="img-fluid mb-2">
+        <h6 class="fw-bold">REFRACTORIES</h6>
+        <p>Refractories</p>
+        <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
+      </div>
+      <div class="col-md-2">
+        <img src="{% static 'images/seeds.jpg' %}" alt="Seeds" class="img-fluid mb-2">
+        <h6 class="fw-bold">SEEDS</h6>
+        <p>Seeds</p>
+        <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
+      </div>
+      <div class="col-md-2">
+        <img src="{% static 'images/peanuts.jpg' %}" alt="Peanuts" class="img-fluid mb-2">
+        <h6 class="fw-bold">PEANUTS</h6>
+        <p>Peanuts</p>
+        <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
+      </div>
+      <div class="col-md-3">
+        <img src="{% static 'images/starch.jpg' %}" alt="Starch" class="img-fluid mb-2">
+        <h6 class="fw-bold">STARCH</h6>
+        <p>Starch</p>
+        <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
+      </div>
+      <div class="col-md-3">
+        <img src="{% static 'images/waste-material.jpg' %}" alt="Waste Material" class="img-fluid mb-2">
+        <h6 class="fw-bold">WASTE MATERIAL</h6>
+        <p>Waste Material</p>
+        <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Text Column -->
+      <div class="col-lg-8 mb-4 mb-lg-0">
+        <h5 class="text-primary fw-bold">WELCOME TO ALPINE FIBC PVT.LTD.</h5>
+        <p>
+          <strong>ALPINE FIBC PVT.LTD.</strong> is one of the leading manufacturer and exporter of a wide range of FIBC/Big Bags and <strong>Food Grade</strong> FIBC like Builder bags, 
+          <strong>4 Panel bags</strong>, U Panel bags, Circular bags, <strong>Baffle bags</strong>, UN Certified bags, On-Two Loop bags, Ventilated bags, Container Liner bags, 
+          BOPP Baffle bags, Gambo bags, Tie Baffle & Net Baffle bags, Asbestos bags, Garden bags, Fall Arrest bags, Reel bags, (Roll packing), Ez Opening bags, Perforated Liner bags, 
+          Sling bags, Helicoptor bags, Stretch Hood and PP Woven Sack, Spiral Tubing, Multifilament Yarn, Tarpaulins, Ground Covers, PP Woven Fabrics.
+        </p>
+        <p>
+          We also supply customize bags. Our Design and Development team is regularly working on designing and developing of FIBC’s according to the customer requirements.
+        </p>
+        <a href="about.html" class="btn btn-outline-dark btn-sm mt-2">+ READ MORE</a>
+      </div>
+
+      <!-- Right Video Column -->
+<div class="col-lg-4">
+  <h6 class="text-primary fw-bold">COMPANY PROFILE</h6>
+<a href="https://alpline.biz499.com/pdf/broc.pdf" target="_blank">
+    <img src="{% static 'images/brovhure_thumb.PNG' %}" alt="broc.PDF Thumbnail" class="img-fluid rounded shadow-sm">
+  </a>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h5 class="text-primary fw-bold mb-4">PRODUCTS</h5>
+    <div class="row g-4">
+      <!-- Product 1 -->
+      <div class="col-md-3 col-6">
+        <div class="border p-2 h-100 bg-white text-center">
+        <a href="circular-fibc.html" class="text-decoration-none">
+          <img src="{% static 'images/products/CIRCULAR-FIBC.jpg' %}" class="img-fluid mb-2" alt="CIRCULAR-FIBC">
+          <div class="bg-primary text-white py-2 fw-semibold">CIRCULAR-FIBC</div>
+        </div>
+        </a>
+      </div>
+      <!-- Product 2 -->
+      <div class="col-md-3 col-6">
+        <div class="border p-2 h-100 bg-white text-center">
+        <a href="conductive-fibc-bags.html" class="text-decoration-none">
+          <img src="{% static 'images/products/CONDUCTIVE-FIBC.jpg' %}" class="img-fluid mb-2" alt="CONDUCTIVE-FIBC">
+          <div class="bg-primary text-white py-2 fw-semibold">CONDUCTIVE-FIBC</div>
+        </div>
+        </a>
+      </div>
+      <!-- Product 3 -->
+      <div class="col-md-3 col-6">
+        <div class="border p-2 h-100 bg-white text-center">
+        <a href="food-grade-fibc-bags.html" class="text-decoration-none">
+          <img src="{% static 'images/products/FOOD-GRADE-FIBC.jpg' %}" class="img-fluid mb-2" alt="Food Grade FIBC">
+          <div class="bg-primary text-white py-2 fw-semibold">FOOD GRADE FIBC</div>
+        </div>
+        </a>
+      </div>
+      <!-- Product 4 -->
+      <div class="col-md-3 col-6">
+        <div class="border p-2 h-100 bg-white text-center">
+         <a href="fibc-liners.html" class="text-decoration-none">
+          <img src="{% static 'images/products/ONE-LOOP-TWO-LOOP.jpg' %}" class="img-fluid mb-2" alt="One/Two Loop FIBC">
+          <div class="bg-primary text-white py-2 fw-semibold">ONE/TWO LOOP FIBC</div>
+        </div>
+        </a>
+      </div>
+      <!-- Product 5 -->
+      <div class="col-md-3 col-6">
+        <div class="border p-2 h-100 bg-white text-center">
+        <a href="pharma-grade-fibc-bags.html" class="text-decoration-none">
+          <img src="{% static 'images/products/PLATTEN-BAG.jpg' %}" class="img-fluid mb-2" alt="PLATTEN-BAG">
+          <div class="bg-primary text-white py-2 fw-semibold">PLATTEN-BAG</div>
+        </div>
+        </a>
+      </div>
+      <!-- Product 6 -->
+      <div class="col-md-3 col-6">
+        <div class="border p-2 h-100 bg-white text-center">
+         <a href="pp-woven-ground-cover.html" class="text-decoration-none">
+          <img src="{% static 'images/products/PP-GROUND-COVER.jpg' %}" class="img-fluid mb-2" alt="PP-GROUND-COVER">
+          <div class="bg-primary text-white py-2 fw-semibold">PP-GROUND-COVER</div>
+        </div>
+        </a>
+      </div>
+      <!-- Product 7 -->
+      <div class="col-md-3 col-6">
+        <div class="border p-2 h-100 bg-white text-center">
+         <a href="pp-woven-ground-cover.html" class="text-decoration-none">
+          <img src="{% static 'images/products/PP-WOVEN-FABRICS.jpg' %}" class="img-fluid mb-2" alt="PP-WOVEN-FABRICS">
+          <div class="bg-primary text-white py-2 fw-semibold">PP-WOVEN-FABRICS</div>
+        </div>
+        </a>
+      </div>
+      <!-- Product 8 -->
+      <div class="col-md-3 col-6">
+        <div class="border p-2 h-100 bg-white text-center">
+        <a href="fibc-bags.html" class="text-decoration-none">
+          <img src="{% static 'images/products/TUNNEL-LOOP-FIBC.jpg' %}" class="img-fluid mb-2" alt="TUNNEL-LOOP-FIBC">
+          <div class="bg-primary text-white py-2 fw-semibold">TUNNEL-LOOP-FIBC</div>
+        </div>
+        </a>
+      </div>
+      <!-- Product 9 -->
+      <div class="col-md-3 col-6">
+        <div class="border p-2 h-100 bg-white text-center">
+          <a href="u-panel-fibc.html" class="text-decoration-none">
+         <img src="{% static 'images/products/U-PANEL-BUILDER-FIBC.jpg' %}" class="img-fluid mb-2" alt="U-PANEL-BUILDER-FIBC">
+          <div class="bg-primary text-white py-2 fw-semibold">U-PANEL-BUILDER-FIBC</div>
+        </div>
+        </a>
+      </div>
+      <!-- Product 10 -->
+      <div class="col-md-3 col-6">
+        <div class="border p-2 h-100 bg-white text-center">
+        <a href="ventilated-fibc-bags.html" class="text-decoration-none">
+          <img src="{% static 'images/products/VENTILATED-FIBC.jpg' %}" class="img-fluid mb-2" alt="VENTILATED-FIBC">
+          <div class="bg-primary text-white py-2 fw-semibold">VENTILATED-FIBC</div>
+        </div>
+        </a>
+      </div>
+      <!-- Product 11 -->
+      <div class="col-md-3 col-6">
+        <div class="border p-2 h-100 bg-white text-center">
+         <a href="about.html" class="text-decoration-none">
+        <img src="{% static 'images/products/WOVEN-SACK.jpg' %}" class="img-fluid mb-2" alt="WOVEN-SACK">
+          <div class="bg-primary text-white py-2 fw-semibold">WOVEN-SACK</div>
+        </div>
+        </a>
+      </div>
+      <!-- Product 12 -->
+      <div class="col-md-3 col-6">
+        <div class="border p-2 h-100 bg-white text-center">
+         <a href="baffle-fibc-bags.html" class="text-decoration-none">
+        <img src="{% static 'images/products/BAFFLE-FIBC.jpg' %}" class="img-fluid mb-2" alt="BAFFLE-FIBC">
+          <div class="bg-primary text-white py-2 fw-semibold">BAFFLE-FIBC</div>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center text-md-start align-items-center">
+      <!-- Global Reach -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h6 class="text-primary fw-bold">GLOBAL REACH</h6>
+        <p>Alpine FIBC Pvt Ltd is a leading <span class="fw-semibold text-primary">big bag</span> exporter in India who never cease to grow since its establishment. Our worldwide network provides customers with cost effective manufacturing options and dependable international and domestic delivery.</p>
+      </div>
+
+      <!-- Location Map -->
+      <div class="col-md-4 mb-4 mb-md-0 text-center">
+        <h6 class="text-primary fw-bold">LOCATION</h6>
+        <img src="{% static 'images/map.png' %}" class="img-fluid mt-2" alt="Location Map">
+      </div>
+
+      <!-- Why Use FIBCs -->
+      <div class="col-md-4">
+        <h6 class="text-primary fw-bold">WHY USE FIBC’S?</h6>
+        <p>FIBC’s are a durable, light weight alternative versus other forms of semi-bulk packaging including multi-walled corrugated boxes and plastic or metal bins. Tare weights for FIBC’s are typically 5-6 lbs.</p>
+        <a href="#" class="btn btn-outline-dark btn-sm">
+          <i class="bi bi-play-fill me-1"></i> + Readmore
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certification Logos Section -->
+<section class="py-4 border-top bg-white">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
+      <img src="{% static 'images/certs/fibca.jpg' %}" alt="FIBCA" height="50">
+      <img src="{% static 'images/certs/efibca.jpg' %}" alt="EFIBCA" height="50">
+      <img src="{% static 'images/certs/tbpa.jpg' %}" alt="TBPA" height="50">
+      <img src="{% static 'images/certs/ifcba.jpg' %}" alt="IFCBA" height="50">
+      <img src="{% static 'images/certs/brcs.jpg' %}" alt="BRCS" height="50">
+      <img src="{% static 'images/certs/iso.jpg' %}" alt="ISO" height="50">
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

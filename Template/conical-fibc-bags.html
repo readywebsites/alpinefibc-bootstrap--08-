@@ -1,0 +1,194 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container py-5">
+  <div class="row align-items-center mb-4">
+    <!-- Heading -->
+   <div class="container my-5">
+  <div class="row align-items-center mb-4">
+    <div class="col-md-9">
+      <h1 class="display-5">Conical FIBC</h1>
+    </div>
+    <div class="col-md-3 text-md-end">
+      <a href="https://www.alpinefibc.com/contact-us/" class="btn btn-primary btn-lg d-inline-flex align-items-center">
+        SEND INQUIRY
+        <i class="bi bi-arrow-right-circle ms-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <hr class="my-4" />
+
+  <div class="row">
+    <div class="col-md-9">
+      <p>
+        FIBCs (<strong>big bags/bulk bags</strong>) with a conical base are specially developed for poorly flowing products. The conical shape at the bottom of the bag ensures that the bulk bag can be discharged quickly and easily. By using this 
+        <strong>bulk bags</strong>, you can sometimes prevent expensive adjustments to discharging systems.
+      </p>
+
+      <h2 class="mt-5 mb-3">Specifications</h2>
+      <ul class="list-unstyled">
+        <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>SWL Range: 500 kg to 2000 kg.</li>
+        <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Flat woven or tubular woven fabric</li>
+        <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Coated or uncoated</li>
+        <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>With or without liner</li>
+        <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Various lifting possibilities</li>
+        <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Various discharging possibilities</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <!-- Image -->
+    <div class="col-md-3 text-center text-md-end">
+      <img src="{% static 'images/Conical-FIBC.jpg' %}" alt="U Panel FIBC" class="img-fluid rounded shadow-sm">
+    </div>
+  </div>
+</div>
+<!-- FIBC Types -->
+    <div class="mt-5">
+      <ul class="nav nav-tabs mb-3" id="fibcTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="lifting-tab" data-bs-toggle="tab" data-bs-target="#lifting" type="button" role="tab">Lifting Loops</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="filling-tab" data-bs-toggle="tab" data-bs-target="#filling" type="button" role="tab">Filling & Closure</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="discharge-tab" data-bs-toggle="tab" data-bs-target="#discharge" type="button" role="tab">Discharge</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="fibcTabsContent">
+
+  <!-- Lifting Loops Tab -->
+  <div class="tab-pane fade show active" id="lifting" role="tabpanel">
+    <div class="row text-center g-3">
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/lifting/ancillary.jpg' %}" class="img-fluid">
+        <p class="mt-2">Discharge Spout with Protection Flap</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/lifting/cross-corner.jpg' %}" class="img-fluid">
+        <p class="mt-2">Discharge Spout with Iris Protection</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/lifting/double-stevedore-steps.jpg' %}" class="img-fluid">
+        <p class="mt-2">Discharge Spout with Petal Closure</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/lifting/hood-lift.jpg' %}" class="img-fluid">
+        <p class="mt-2">Discharge Spout with Petal Closure</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/lifting/side-seems-115x165-1.jpg' %}" class="img-fluid">
+        <p class="mt-2">Discharge Spout
+</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/lifting/single-stevedore-strap.jpg' %}" class="img-fluid">
+        <p class="mt-2">Full Drop Bottom
+</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/lifting/sleeve-lift.jpg' %}" class="img-fluid">
+        <p class="mt-2">Quick Discharge / Conical base
+</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filling & Closure Tab -->
+  <div class="tab-pane fade" id="filling" role="tabpanel">
+    <div class="row text-center g-3">
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/Filling & Closure/Duffel-Top1.png' %}" class="img-fluid">
+        <p class="mt-2">Open Top With Hem
+</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/Filling & Closure/Filling-Spout.png' %}" class="img-fluid">
+        <p class="mt-2">Tie Down Flap
+</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/Filling & Closure/Open-Top-Tightening-Holes.png' %}" class="img-fluid">
+        <p class="mt-2">Duffel Top
+</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/Filling & Closure/Open-Top-With-Draw-Cord.png' %}" class="img-fluid">
+        <p class="mt-2">Open Top & Tightening Holes
+</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/Filling & Closure/Open-Top-With-Hem.png' %}" class="img-fluid">
+        <p class="mt-2">Open Top With Draw Cord
+</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/Filling & Closure/Tie-Down-Flap.png' %}" class="img-fluid">
+        <p class="mt-2">Filling Spout
+</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Discharge Tab -->
+  <div class="tab-pane fade" id="discharge" role="tabpanel">
+    <div class="row text-center g-3">
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/Discharge/Discharge-Spout.gif' %}" class="img-fluid">
+        <p class="mt-2">Spout Bottom</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/Discharge/Discharge-Spout-with-Iris-Protection.gif' %}" class="img-fluid">
+        <p class="mt-2">Plain Bottom</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/Discharge/Discharge-Spout-with-Petal-Closure.gif' %}" class="img-fluid">
+        <p class="mt-2">Full Drop Bottom</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="{% static 'images/Discharge/Discharge-Spout-with-Petal-Closure1.gif' %}" class="img-fluid">
+        <p class="mt-2">Conical Bottom</p>
+      </div>
+       <div class="col-6 col-md-2">
+        <img src="{% static 'images/Discharge/Discharge-Spout-with-Protection-Flap.gif' %}" class="img-fluid">
+        <p class="mt-2">Conical Bottom</p>
+      </div>
+       <div class="col-6 col-md-2">
+        <img src="{% static 'images/Discharge/Full-Drop-Bottom.gif' %}" class="img-fluid">
+        <p class="mt-2">Conical Bottom</p>
+      </div>
+       <div class="col-6 col-md-2">
+        <img src="{% static 'images/Discharge/Quick-Discharge-Conical-base.gif' %}"class="img-fluid">
+        <p class="mt-2">Conical Bottom</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const link = document.querySelector('.hover-dropdown > a');
+
+    if (link) {
+      link.addEventListener('click', function (e) {
+        // Prevent Bootstrap dropdown toggle
+        e.stopPropagation();
+        // Go to products.html
+        window.location.href = this.getAttribute('href');
+      });
+    }
+  });
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,149 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<!-- Contact Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Contact Us</h2>
+    <div class="row g-4 mb-4">
+      <!-- Google Maps -->
+      <div class="col-md-6">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!..." width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="col-md-6">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!..." width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="row text-center mb-5">
+      <div class="col-md-4">
+        <h5>Registered Office</h5>
+        <p>Alpine FIBC Pvt Ltd<br>A 1206-1207, “The Capital”, Nr Hetarth Party Plot, Science City Road, Sola, Ahmedabad–380060</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Factory Address</h5>
+        <p>Block No 447, 450 & 458, Mouje Sari, Ta Sanand, Dist Ahmedabad, Gujarat–382220</p>
+      </div>
+      <div class="col-md-4">
+        <h5>For Product Sales Inquiries</h5>
+        <p>+91 90990 82104<br>sales@alpinefibc.com</p>
+      </div>
+    </div>
+
+    <div class="row text-center mb-5">
+      <div class="col-md-4">
+        <h5>For Domestic Sales Inquiries</h5>
+        <p>+91 90990 82105<br>sales@alpinefibc.com</p>
+      </div>
+      <div class="col-md-4">
+        <h5>For Export Sales Inquiries</h5>
+        <p>+91 90990 82106<br>sales@alpinefibc.com</p>
+      </div>
+      <div class="col-md-4">
+        <h5>For Job Information</h5>
+        <p>+91 90990 82108<br>hr@alpinefibc.com</p>
+      </div>
+    </div>
+
+    <!-- Inquiry Form -->
+<div class="row align-items-center bg-light p-4">
+  <div class="col-md-6 mb-4 mb-md-0">
+    <form id="contactForm">
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Your Name (Required)" id="name" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Your Email (Required)" id="email" required>
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Your Mobile" id="mobile">
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" rows="4" placeholder="Your Message" id="message"></textarea>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="recaptcha" required>
+        <label class="form-check-label" for="recaptcha">I’m not a robot</label>
+      </div>
+      <button type="submit" class="btn btn-primary">SEND</button>
+    </form>
+  </div>
+  <div class="col-md-6 text-center">
+    <img src="{% static 'images/contact-1-1.jpg' %}" class="img-fluid rounded shadow" alt="Contact Icons">
+  </div>
+</div>
+
+<!-- Bootstrap Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title w-100" id="successModalLabel">Thank You!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Your inquiry has been submitted successfully. We’ll get back to you soon.
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript to handle form submission -->
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Collect form values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mobile = document.getElementById('mobile').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // WhatsApp message format
+    const text = `Name: ${name}%0AEmail: ${email}%0AMobile: ${mobile}%0AMessage: ${message}`;
+    const phoneNumber = "918734899793"; // Replace with your WhatsApp number (without +)
+
+    // Open WhatsApp link
+    window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
+
+    // Show success modal
+    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+    successModal.show();
+
+    // Optional: Reset the form
+    document.getElementById('contactForm').reset();
+  });
+</script>
+
+<!-- Bootstrap JS Bundle (place this before closing </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const link = document.querySelector('.hover-dropdown > a');
+
+    if (link) {
+      link.addEventListener('click', function (e) {
+        // Prevent Bootstrap dropdown toggle
+        e.stopPropagation();
+        // Go to products.html
+        window.location.href = this.getAttribute('href');
+      });
+    }
+  });
+</script>
+{% endblock %}

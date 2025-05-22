@@ -1,0 +1,86 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+
+{% block content %}<!-- Infrastructure Section -->
+<div class="container my-5">
+  <!-- Heading -->
+  <h5 class="fw-bold text-uppercase">Infrastructure</h5>
+
+  <!-- Separator Line -->
+  <hr class="mt-1 mb-4">
+
+  <!-- Bullet Points with Icons -->
+  <ul class="list-unstyled">
+    <li class="mb-2"><i class="bi bi-caret-right-fill text-primary me-2"></i><strong>Extrusion:</strong> We have 2 Nos. of extrusion; each one has a capacity to produce 600 kgs per hour of Polypropylene tapes of various weights and strengths.</li>
+    <li class="mb-2"><i class="bi bi-caret-right-fill text-primary me-2"></i><strong>Looms:</strong> 49 circular looms to produce fabric of any width and weight including 2 special looms for Ventilated fabric.</li>
+    <li class="mb-2"><i class="bi bi-caret-right-fill text-primary me-2"></i><strong>Belt Weaving:</strong> 10 needle looms and 1 Machine for Dust proof making</li>
+    <li class="mb-2"><i class="bi bi-caret-right-fill text-primary me-2"></i><strong>Lamination:</strong> 90 mm Extrusion Coating Plant with a maximum lamination width of 2.05 meters</li>
+    <li class="mb-2"><i class="bi bi-caret-right-fill text-primary me-2"></i><strong>Fabrilator:</strong> Fabrillator machine for PP thread for food grade bags.</li>
+    <li class="mb-2"><i class="bi bi-caret-right-fill text-primary me-2"></i><strong>Fabric Cutting:</strong> Three Jumbo Bag Fabric Cutting Lines of 60” & 80” widths</li>
+    <li class="mb-2"><i class="bi bi-caret-right-fill text-primary me-2"></i><strong>Belt Cutting:</strong> We have 3 Automatic Belt/Webbing Cutting machines</li>
+    <li class="mb-2"><i class="bi bi-caret-right-fill text-primary me-2"></i><strong>Printing:</strong> 2 printing Machine for Jumbo Bags with a capacity of 4 color printing. One roll to roll printing machine for small woven & sack bags.</li>
+    <li class="mb-2"><i class="bi bi-caret-right-fill text-primary me-2"></i><strong>Auto Cutting:</strong> 2 Auto cutting and stitching machine.</li>
+    <li class="mb-2"><i class="bi bi-caret-right-fill text-primary me-2"></i><strong>Liner Plants:</strong> 3 Multi layer extrusion Plant for Liner Using Jumbo bags Stitching</li>
+    <li class="mb-2"><i class="bi bi-caret-right-fill text-primary me-2"></i><strong>Gluing Machine:</strong> For glue fitted liner.</li>
+    <li class="mb-2"><i class="bi bi-caret-right-fill text-primary me-2"></i><strong>Metal Detector:</strong> For Food grade FIBC Bags.</li>
+    <li class="mb-2"><i class="bi bi-caret-right-fill text-primary me-2"></i><strong>Multi filament plant:</strong> With capacity from 650 Denier to 4000 Denier.</li>
+  </ul>
+</div>
+
+
+<div class="container mt-4">
+  <!-- Clean Room -->
+  <div class="mb-3">
+    <p class="mb-2">
+      <i class="bi bi-caret-right-fill text-primary me-2"></i>
+      <strong>Clean Room Facility:</strong>
+      We produce FIBCs from a state-of-the-art clean room facility to meet strict international standards (ISO 9001, ISO 14000, ISO 22000). The clean room includes ultrasonic cutting, air washing, metal detecting, and follows HACCP for food safety.
+    </p>
+  </div>
+
+  <!-- Testing Lab -->
+  <div>
+    <p class="mb-0">
+      <i class="bi bi-caret-right-fill text-primary me-2"></i>
+      <strong>Testing Lab:</strong>
+      Equipped to perform breaking strength tests, UV tests, elongation, dart impact, coefficient of friction, air permeability, conductivity, and UN tests per Indian and international standards.
+    </p>
+  </div>
+</div>
+
+<!-- Centered Image -->
+<div class="vc_row vc_row-outer vc_row-fluid">
+  <div class="wpb_column vc_column_container vc_col-sm-12">
+    <div class="vc_column-inner">
+      <div class="wpb_wrapper text-center">
+        <div class="tm-image tm-animation move-up">
+          <img src="{% static 'images/infrastruc11.jpg' %}" alt="infrastruc11" class="img-fluid" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const link = document.querySelector('.hover-dropdown > a');
+
+    if (link) {
+      link.addEventListener('click', function (e) {
+        // Prevent Bootstrap dropdown toggle
+        e.stopPropagation();
+        // Go to products.html
+        window.location.href = this.getAttribute('href');
+      });
+    }
+  });
+</script>
+{% endblock %}
