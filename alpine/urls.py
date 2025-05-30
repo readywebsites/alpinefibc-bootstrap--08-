@@ -1,5 +1,7 @@
+from django.conf import settings
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls.static import static
 from main import views
 
 urlpatterns = [
@@ -33,3 +35,7 @@ urlpatterns = [
     path('conical-fibc-bags.html', views.conical_fibc_bags, name='conical-fibc-bags'),
     path('pharma-grade-fibc-bags.html', views.pharma_grade_fibc_bags, name='pharma-grade-fibc-bags'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
