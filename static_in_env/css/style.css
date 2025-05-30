@@ -10,8 +10,32 @@ h1, h2, h5, h6 {
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 70px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  padding: 0.7rem 1rem;
+  font-weight: 500;
+}
+
+.navbar-toggler {
+  font-size: 1.2rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.navbar-toggler-icon {
+  width: 1.5em;
+  height: 1.5em;
 }
 
 section {
@@ -133,6 +157,15 @@ footer {
 @media (max-width: 576px) {
   .whatsapp-tooltip {
     display: none;
+  }
+
+  .navbar-brand img {
+    height: 55px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 
