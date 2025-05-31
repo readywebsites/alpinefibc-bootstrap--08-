@@ -199,3 +199,10 @@ footer {
     margin-top: 0;
   }
 }
+
+
+.product-img {
+  height: 200px;       /* Fixed height for uniform size */
+  width: 100%;         /* Full width of container */
+  object-fit: cover;   /* Crop and fill evenly */
+}
