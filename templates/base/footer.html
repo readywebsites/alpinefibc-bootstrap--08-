@@ -1,15 +1,15 @@
 {% load static %}
 
 <style>
-  .certificate-slider {
-    display: flex;
-    gap: 20px;
-    animation: scroll-left 20s linear infinite;
-  }
-
   .scroll-container {
     overflow: hidden;
-    white-space: nowrap;
+    position: relative;
+  }
+
+  .certificate-slider {
+    display: flex;
+    animation: scroll-left 30s linear infinite;
+    gap: 30px;
   }
 
   @keyframes scroll-left {
@@ -17,16 +17,25 @@
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
     }
   }
 
-  .certificate-slider img {
-    max-height: 80px;
+  .certificate-slider a {
+    display: block;
     flex-shrink: 0;
+    width: 200px; /* Adjust width as per image size */
+  }
+
+  .certificate-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
 </style>
 
+<!-- Footer Start -->
 <footer class="bg-primary text-white pt-5">
   <div class="container">
     <div class="row">
@@ -35,12 +44,32 @@
         <h6 class="text-uppercase fw-bold mb-3">Certification</h6>
         <div class="scroll-container">
           <div class="certificate-slider">
-            <img src="{% static 'images/certificate1.png' %}" alt="Certificate 1" class="img-fluid">
-            <img src="{% static 'images/certificate2.png' %}" alt="Certificate 2" class="img-fluid">
-            <img src="{% static 'images/certificate3.png' %}" alt="Certificate 3" class="img-fluid">
-            <img src="{% static 'images/certificate4.png' %}" alt="Certificate 4" class="img-fluid">
-            <img src="{% static 'images/certificate5.png' %}" alt="Certificate 5" class="img-fluid">
-            <img src="{% static 'images/certificate6.png' %}" alt="Certificate 6" class="img-fluid">
+            <a href="{% url 'certification' %}">
+              <img src="{% static 'images/certificate1.png' %}" alt="Certificate 1">
+            </a>
+            <a href="{% url 'certification' %}">
+              <img src="{% static 'images/certificate2.png' %}" alt="Certificate 2">
+            </a>
+            <a href="{% url 'certification' %}">
+              <img src="{% static 'images/certificate3.png' %}" alt="Certificate 3">
+            </a>
+            <a href="{% url 'certification' %}">
+              <img src="{% static 'images/certificate4.png' %}" alt="Certificate 4">
+            </a>
+            <a href="{% url 'certification' %}">
+              <img src="{% static 'images/certificate5.png' %}" alt="Certificate 5">
+            </a>
+            <a href="{% url 'certification' %}">
+              <img src="{% static 'images/certificate6.png' %}" alt="Certificate 6">
+            </a>
+
+            <!-- Duplicate for seamless scroll -->
+            <a href="{% url 'certification' %}">
+              <img src="{% static 'images/certificate1.png' %}" alt="Certificate 1">
+            </a>
+            <a href="{% url 'certification' %}">
+              <img src="{% static 'images/certificate2.png' %}" alt="Certificate 2">
+            </a>
           </div>
         </div>
       </div>
@@ -63,7 +92,7 @@
       <!-- Quick Contact Us -->
       <div class="col-md-4 mb-4">
         <h6 class="text-uppercase fw-bold mb-3">Quick Contact Us</h6>
-        <p class="mb-1 fw-semibold">SHRI KHEMISATI  Pvt Ltd</p>
+        <p class="mb-1 fw-semibold">SHRI KHEMISATI Pvt Ltd</p>
         <p class="mb-2">
           <i class="bi bi-geo-alt-fill me-1"></i>
           A 1206-1207 "The Capital"<br>
@@ -78,7 +107,7 @@
 
     <!-- Footer Bottom -->
     <div class="text-center border-top border-white pt-3 mt-3 pb-4 small">
-      COPYRIGHTS © 2025, <strong>SHRI KHEMISATI  PVT. LTD.</strong> | ALL RIGHTS RESERVED. POWERED BY 
+      COPYRIGHTS © 2025, <strong>SHRI KHEMISATI PVT. LTD.</strong> | ALL RIGHTS RESERVED. POWERED BY 
       <a href="#" class="text-white text-decoration-none"><strong>8WEBCOM.COM</strong></a>
     </div>
   </div>
