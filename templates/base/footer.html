@@ -1,18 +1,47 @@
 {% load static %}
 
+<style>
+  .certificate-slider {
+    display: flex;
+    gap: 20px;
+    animation: scroll-left 20s linear infinite;
+  }
+
+  .scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .certificate-slider img {
+    max-height: 80px;
+    flex-shrink: 0;
+  }
+</style>
+
 <footer class="bg-primary text-white pt-5">
   <div class="container">
     <div class="row">
       <!-- Certification -->
       <div class="col-md-4 mb-4">
         <h6 class="text-uppercase fw-bold mb-3">Certification</h6>
-        <div class="d-flex overflow-auto gap-2 pb-2">
-          <img src="{% static 'images/certificate1.png' %}" alt="Certificate 1" class="img-fluid" style="max-height: 80px;">
-          <img src="{% static 'images/certificate2.png' %}" alt="Certificate 2" class="img-fluid" style="max-height: 80px;">
-          <img src="{% static 'images/certificate3.png' %}" alt="Certificate 3" class="img-fluid" style="max-height: 80px;">
-          <img src="{% static 'images/certificate4.png' %}" alt="Certificate 4" class="img-fluid" style="max-height: 80px;">
-          <img src="{% static 'images/certificate5.png' %}" alt="Certificate 5" class="img-fluid" style="max-height: 80px;">
-          <img src="{% static 'images/certificate6.png' %}" alt="Certificate 6" class="img-fluid" style="max-height: 80px;">
+        <div class="scroll-container">
+          <div class="certificate-slider">
+            <img src="{% static 'images/certificate1.png' %}" alt="Certificate 1" class="img-fluid">
+            <img src="{% static 'images/certificate2.png' %}" alt="Certificate 2" class="img-fluid">
+            <img src="{% static 'images/certificate3.png' %}" alt="Certificate 3" class="img-fluid">
+            <img src="{% static 'images/certificate4.png' %}" alt="Certificate 4" class="img-fluid">
+            <img src="{% static 'images/certificate5.png' %}" alt="Certificate 5" class="img-fluid">
+            <img src="{% static 'images/certificate6.png' %}" alt="Certificate 6" class="img-fluid">
+          </div>
         </div>
       </div>
 
