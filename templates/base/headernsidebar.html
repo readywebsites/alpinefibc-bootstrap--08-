@@ -1,24 +1,53 @@
 {% load static %}
 
+<style>
+  /* Toggle arrow style */
+  .toggle-sub-menu {
+    margin-left: 5px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+  }
+
+  /* Rotate arrow when dropdown is open */
+  .dropdown.show .toggle-sub-menu {
+    transform: rotate(180deg);
+  }
+
+  /* Optional: Adjust dropdown hover effect */
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+</style>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
   <div class="container">
     <a class="navbar-brand" href="{% url 'home' %}">
-      <img src="{% static 'images/logoo.webp' %}"  alt="Alpine FIBC" height="60" width="auto" class="me-2">
+      <img src="{% static 'images/logoo.webp' %}" alt="Alpine FIBC" height="60" class="me-2">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
+
         <li class="nav-item">
           <a class="nav-link" href="{% url 'home' %}">Home</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="{% url 'about_view' %}">About</a>
         </li>
-        <li class="nav-item dropdown hover-dropdown">
-          <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Products
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Products <span class="toggle-sub-menu"></span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="productsDropdown">
             <li><a class="dropdown-item" href="{% url 'u-panel-fibc' %}">U Panel FIBC</a></li>
@@ -37,28 +66,36 @@
             <li><a class="dropdown-item" href="{% url 'pharma-grade-fibc-bags' %}">Pharma Grade FIBC Bags</a></li>
           </ul>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="{% url 'quality' %}">Quality</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="{% url 'infrastructure' %}">Infrastructure</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="{% url 'certification' %}">Certification</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="{% url 'blog' %}">Blog</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="{% url 'career' %}">Career</a>
         </li>
+
       </ul>
     </div>
   </div>
 </nav>
+
 <script>
   // Optional JS for dropdown toggle behavior if needed manually
   document.querySelectorAll('.nav-item.dropdown > a').forEach((el) => {
