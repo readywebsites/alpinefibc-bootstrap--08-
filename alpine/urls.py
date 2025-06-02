@@ -34,6 +34,8 @@ urlpatterns = [
     path('4-panel-fibc-bags.html', views.four_panel_fibc_bags, name='4-panel-fibc-bags'),
     path('conical-fibc-bags.html', views.conical_fibc_bags, name='conical-fibc-bags'),
     path('pharma-grade-fibc-bags.html', views.pharma_grade_fibc_bags, name='pharma-grade-fibc-bags'),
+    path('why-use-fibcs.html', views.why_use_fibcs, name='why_use_fibcs'),
+
 ]
 
 if settings.DEBUG:

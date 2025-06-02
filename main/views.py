@@ -69,3 +69,7 @@ def conical_fibc_bags(request):
 
 def pharma_grade_fibc_bags(request):
     return render(request, 'pharma-grade-fibc-bags.html')
+
+
+def why_use_fibcs(request):
+    return render(request, 'why-use-fibcs.html')
