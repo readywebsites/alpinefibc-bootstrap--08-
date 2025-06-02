@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+
+
+
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-primary fw-bold">WHY USE FIBCs?</h2>
+    <hr class="double-line my-3">
+
+    <div class="row align-items-center mt-4">
+      
+      <!-- Left Text -->
+      <div class="col-md-7">
+        <ul class="list-unstyled fs-5">
+          <li class="mb-3"><span class="text-primary me-2">🔵</span> FIBCs are durable, lightweight alternatives to corrugated boxes and plastic/metal bins.</li>
+          <li class="mb-3"><span class="text-primary me-2">🔵</span> FIBCs are 100% recyclable, woven polypropylene (PP).</li>
+          <li class="mb-3"><span class="text-primary me-2">🔵</span> FIBCs take up significantly less warehouse space — 100 empty FIBCs = 1 empty bin.</li>
+          <li class="mb-3"><span class="text-primary me-2">🔵</span> Custom design ensures customers get exact quantity needed — saves time and labor.</li>
+          <li class="mb-3"><span class="text-primary me-2">🔵</span> Easier to handle 25 lb. & 50 lb. bags — FIBCs handle 2,000 lb. loads, reducing repetitive labor.</li>
+        </ul>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-md-5 text-center">
+        <img src="{% static 'images/why-us-graphic.png' %}" alt="Why Us Graphic" class="img-fluid border">
+      </div>
+      
+    </div>
+  </div>
+</section>
+{% endblock %}
