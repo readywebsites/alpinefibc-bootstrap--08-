@@ -41,89 +41,131 @@
   </div>
 </section>
 <section class="bg-light py-5">
+  <style>
+    .custom-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 1.5rem;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .industry-img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .industry-img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+      .custom-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+    @media (max-width: 992px) {
+      .custom-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .custom-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 576px) {
+      .custom-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
   <div class="container">
     <h2 class="text-center mb-4">Industries We Serve</h2>
-    <div class="row text-center g-4">
-      <!-- Repeat this col-md-2 block for each industry -->
-      <div class="col-md-2">
+    <div class="custom-grid">
+      <div>
         <img src="{% static 'images/chemical.png' %}" alt="Chemical" class="img-fluid mb-2 industry-img">
         <h6 class="fw-bold">CHEMICAL</h6>
         <p>Chemical</p>
         <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
       </div>
-      <div class="col-md-2">
+      <div>
         <img src="{% static 'images/pharmaceutical.jpg' %}" alt="Pharmaceutical" class="img-fluid mb-2 industry-img">
         <h6 class="fw-bold">PHARMACEUTICAL</h6>
         <p>Pharmaceutical</p>
         <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
       </div>
-      <div class="col-md-2">
+      <div>
         <img src="{% static 'images/fertilizers.jpg' %}" alt="Fertilizers" class="img-fluid mb-2 industry-img">
         <h6 class="fw-bold">FERTILIZERS</h6>
         <p>Fertilizers</p>
         <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
       </div>
-      <div class="col-md-2">
+      <div>
         <img src="{% static 'images/food.jpg' %}" alt="Food" class="img-fluid mb-2 industry-img">
         <h6 class="fw-bold">FOOD</h6>
         <p>Food Products</p>
         <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
       </div>
-      <div class="col-md-2">
+      <div>
         <img src="{% static 'images/fiberglass.jpg' %}" alt="Fiberglass" class="img-fluid mb-2 industry-img">
         <h6 class="fw-bold">FIBERGLASS</h6>
         <p>Fiberglass</p>
         <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
       </div>
-      <div class="col-md-2">
+      <div>
         <img src="{% static 'images/grains.jpg' %}" alt="Grains" class="img-fluid mb-2 industry-img">
         <h6 class="fw-bold">GRAINS</h6>
         <p>Grains</p>
         <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
       </div>
-      <div class="col-md-2">
+      <div>
         <img src="{% static 'images/pigment1.jpg' %}" alt="Pigments" class="img-fluid mb-2 industry-img">
         <h6 class="fw-bold">PIGMENTS</h6>
         <p>Pigments</p>
         <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
       </div>
-      <div class="col-md-2">
+      <div>
         <img src="{% static 'images/plastics.jpg' %}" alt="Plastics" class="img-fluid mb-2 industry-img">
         <h6 class="fw-bold">PLASTICS</h6>
         <p>Plastics</p>
         <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
       </div>
-      <div class="col-md-2">
+      <div>
         <img src="{% static 'images/construction.jpg' %}" alt="Construction" class="img-fluid mb-2 industry-img">
         <h6 class="fw-bold">CONSTRUCTION</h6>
         <p>Construction</p>
         <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
       </div>
-      <div class="col-md-2">
+      <div>
         <img src="{% static 'images/refractories.jpg' %}" alt="Refractories" class="img-fluid mb-2 industry-img">
         <h6 class="fw-bold">REFRACTORIES</h6>
         <p>Refractories</p>
         <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
       </div>
-      <div class="col-md-2">
+      <div>
         <img src="{% static 'images/seeds.jpg' %}" alt="Seeds" class="img-fluid mb-2 industry-img">
         <h6 class="fw-bold">SEEDS</h6>
         <p>Seeds</p>
         <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
       </div>
-      <div class="col-md-2">
+      <div>
         <img src="{% static 'images/peanuts.jpg' %}" alt="Peanuts" class="img-fluid mb-2 industry-img">
         <h6 class="fw-bold">PEANUTS</h6>
         <p>Peanuts</p>
         <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
       </div>
-      <div class="col-md-3">
+      <div>
         <img src="{% static 'images/starch.jpg' %}" alt="Starch" class="img-fluid mb-2 industry-img">
         <h6 class="fw-bold">STARCH</h6>
         <p>Starch</p>
         <a href="about.html" class="btn btn-outline-primary btn-sm">+ Readmore</a>
       </div>
-      <div class="col-md-3">
+      <div>
         <img src="{% static 'images/waste-material.jpg' %}" alt="Waste Material" class="img-fluid mb-2 industry-img">
         <h6 class="fw-bold">WASTE MATERIAL</h6>
         <p>Waste Material</p>
@@ -132,6 +174,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- Add this CSS either in your static CSS file or within a <style> block -->
 <style>
