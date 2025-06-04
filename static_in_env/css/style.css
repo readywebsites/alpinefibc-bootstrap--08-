@@ -236,17 +236,41 @@ footer {
       background: #f5f5f5;
     }
 
-  .scrolling-logo-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    overflow-x: auto;
-    padding: 10px 0;
-  }
-  .scrolling-logo-bar img {
-    max-height: 80px;
-    object-fit: contain;
-  }
+  <!-- Certification Logos Section -->
 
+     .scrolling-logo-bar {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 30px;
+      padding: 10px 0;
+      justify-content: center; /* center logos horizontally */
+      align-items: center;     /* vertically align logos */
+    }
+
+    .scrolling-logo-bar img {
+      height: 50px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex: 0 0 auto;
+    }
+
+    .scrolling-logo-bar img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    /* Optional scrollbar style */
+    .scrolling-logo-bar::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .scrolling-logo-bar::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 3px;
+    }
+
+    .scrolling-logo-bar::-webkit-scrollbar-track {
+      background: #f5f5f5;
+    }
   </style>
