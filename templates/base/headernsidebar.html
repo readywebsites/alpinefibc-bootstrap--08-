@@ -86,6 +86,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products <span class="toggle-sub-menu"></span>
           </a>
+          
           <ul class="dropdown-menu" aria-labelledby="productsDropdown">
             <li><a class="dropdown-item" href="{% url 'u-panel-fibc' %}">U Panel FIBC</a></li>
             <li><a class="dropdown-item" href="{% url 'circular-fibc' %}">Circular FIBC</a></li>
@@ -107,6 +108,10 @@
         <li class="nav-item"><a class="nav-link" href="{% url 'quality' %}">Quality</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'infrastructure' %}">Infrastructure</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'certification' %}">Certification</a></li>
+
+        <!-- Why Choose Us link -->
+        <li class="nav-item"><a class="nav-link" href="{% url 'why_choose_us' %}">Why Choose Us</a></li>
+
         <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'career' %}">Career</a></li>
