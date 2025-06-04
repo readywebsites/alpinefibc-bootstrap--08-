@@ -235,4 +235,18 @@ footer {
     .scrolling-logo-bar::-webkit-scrollbar-track {
       background: #f5f5f5;
     }
+
+  .scrolling-logo-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+  }
+  .scrolling-logo-bar img {
+    max-height: 80px;
+    object-fit: contain;
+  }
+
   </style>
