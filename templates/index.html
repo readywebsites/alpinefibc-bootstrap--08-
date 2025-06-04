@@ -362,7 +362,45 @@
     </div>
   </div>
 </section>
+
 <!-- Certification Logos Section -->
+<section class="py-4 border-top bg-white">
+  <style>
+    .scrolling-logo-bar {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 30px;
+      padding: 10px 0;
+    }
+
+    .scrolling-logo-bar img {
+      height: 50px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex: 0 0 auto;
+    }
+
+    .scrolling-logo-bar img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    /* Optional scrollbar style */
+    .scrolling-logo-bar::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .scrolling-logo-bar::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 3px;
+    }
+
+    .scrolling-logo-bar::-webkit-scrollbar-track {
+      background: #f5f5f5;
+    }
+  </style>
+
   <div class="container">
     <div class="scrolling-logo-bar">
       <img src="{% static 'images/certs/fibca.jpg' %}" alt="FIBCA">
@@ -374,7 +412,6 @@
     </div>
   </div>
 </section>
-
 
 
 
