@@ -1,7 +1,7 @@
 {% load static %}
 
 <style>
-  /* Toggle arrow style */
+  /* Custom arrow style */
   .toggle-sub-menu {
     margin-left: 5px;
     display: inline-block;
@@ -12,6 +12,11 @@
     border-top: 5px solid white;
     vertical-align: middle;
     transition: transform 0.3s ease;
+  }
+
+  /* Hide default Bootstrap arrow */
+  .dropdown-toggle::after {
+    display: none !important;
   }
 
   /* Rotate arrow when dropdown is open */
@@ -77,7 +82,10 @@
     <a class="navbar-brand" href="{% url 'home' %}">
       <img src="{% static 'images/shri.webp' %}" alt="Alpine FIBC" height="60" class="me-2">
     </a>
-   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
 
@@ -157,7 +165,7 @@
 </div>
 
 <script>
-  // Optional JS for dropdown toggle behavior if needed manually
+  // Handle arrow rotation on dropdown toggle
   document.querySelectorAll('.nav-item.dropdown > a').forEach((el) => {
     el.addEventListener('click', function (e) {
       const parent = this.closest('.dropdown');
