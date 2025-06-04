@@ -35,7 +35,8 @@ urlpatterns = [
     path('conical-fibc-bags.html', views.conical_fibc_bags, name='conical-fibc-bags'),
     path('pharma-grade-fibc-bags.html', views.pharma_grade_fibc_bags, name='pharma-grade-fibc-bags'),
     path('why-use-fibcs.html', views.why_use_fibcs, name='why_use_fibcs'),
-    
+    path('products/', views.product_view, name='product')
+
 
 ]
 
