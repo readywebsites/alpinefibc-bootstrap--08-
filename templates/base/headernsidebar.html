@@ -1,5 +1,8 @@
 {% load static %}
 
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
 <style>
   /* Toggle arrow style */
   .toggle-sub-menu {
@@ -14,12 +17,11 @@
     transition: transform 0.3s ease;
   }
 
-  /* Rotate arrow when dropdown is open */
   .dropdown.show .toggle-sub-menu {
     transform: rotate(180deg);
   }
 
-  /* Optional: Adjust dropdown hover effect */
+  /* Dropdown hover support */
   .navbar-nav .dropdown:hover .dropdown-menu {
     display: block;
   }
@@ -48,29 +50,15 @@
     opacity: 0.9;
   }
 
-  .social-sidebar a.whatsapp {
-    background-color: #25D366;
-  }
-
-  .social-sidebar a.facebook {
-    background-color: #3b5998;
-  }
-
-  .social-sidebar a.instagram {
-    background-color: #E1306C;
-  }
-
-  .social-sidebar a.linkedin {
-    background-color: #0077b5;
-  }
+  .social-sidebar a.whatsapp { background-color: #25D366; }
+  .social-sidebar a.facebook { background-color: #3b5998; }
+  .social-sidebar a.instagram { background-color: #E1306C; }
+  .social-sidebar a.linkedin { background-color: #0077b5; }
 
   .social-sidebar i {
     font-size: 18px;
   }
 </style>
-
-<!-- Font Awesome (for social icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
   <div class="container">
@@ -83,14 +71,8 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'home' %}">Home</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'about_view' %}">About</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'about_view' %}">About</a></li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -114,30 +96,12 @@
           </ul>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'quality' %}">Quality</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'infrastructure' %}">Infrastructure</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'certification' %}">Certification</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'blog' %}">Blog</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'career' %}">Career</a>
-        </li>
-
+        <li class="nav-item"><a class="nav-link" href="{% url 'quality' %}">Quality</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'infrastructure' %}">Infrastructure</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'certification' %}">Certification</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'career' %}">Career</a></li>
       </ul>
     </div>
   </div>
@@ -145,24 +109,16 @@
 
 <!-- Social Sidebar -->
 <div class="social-sidebar">
-  <a href="https://wa.me/919999999999" class="whatsapp" target="_blank" title="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a href="https://facebook.com/yourprofile" class="facebook" target="_blank" title="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://instagram.com/yourprofile" class="instagram" target="_blank" title="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://linkedin.com/in/yourprofile" class="linkedin" target="_blank" title="LinkedIn">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
+  <a href="https://wa.me/919999999999" class="whatsapp" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://facebook.com/yourprofile" class="facebook" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://instagram.com/yourprofile" class="instagram" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://linkedin.com/in/yourprofile" class="linkedin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
 </div>
 
 <script>
-  // Optional JS for dropdown toggle behavior if needed manually
+  // Maintain arrow rotation state
   document.querySelectorAll('.nav-item.dropdown > a').forEach((el) => {
-    el.addEventListener('click', function (e) {
+    el.addEventListener('click', function () {
       const parent = this.closest('.dropdown');
       setTimeout(() => {
         parent.classList.toggle('show', this.getAttribute('aria-expanded') === 'true');
