@@ -362,16 +362,20 @@
     </div>
   </div>
 </section>
-
 <!-- Certification Logos Section -->
 <section class="py-4 border-top bg-white">
   <style>
+    .scrolling-logo-container {
+      overflow: hidden;
+      position: relative;
+    }
+
     .scrolling-logo-bar {
       display: flex;
       flex-wrap: nowrap;
-      overflow-x: auto;
-      gap: 30px;
+      gap: 50px;
       padding: 10px 0;
+      animation: scroll-logos 30s linear infinite;
     }
 
     .scrolling-logo-bar img {
@@ -386,22 +390,35 @@
       cursor: pointer;
     }
 
-    /* Optional scrollbar style */
-    .scrolling-logo-bar::-webkit-scrollbar {
-      height: 6px;
+    /* Keyframes for infinite scroll */
+    @keyframes scroll-logos {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
 
-    .scrolling-logo-bar::-webkit-scrollbar-thumb {
-      background-color: #ccc;
-      border-radius: 3px;
+    /* Optional: Pause animation on hover */
+    .scrolling-logo-container:hover .scrolling-logo-bar {
+      animation-play-state: paused;
     }
 
-    .scrolling-logo-bar::-webkit-scrollbar-track {
-      background: #f5f5f5;
+    /* Scrollbar hidden for clean look */
+    .scrolling-logo-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .scrolling-logo-bar {
+        animation-duration: 20s;
+        gap: 30px;
+      }
     }
   </style>
 
-  <div class="container">
+  <div class="container scrolling-logo-container">
     <div class="scrolling-logo-bar">
       <img src="{% static 'images/certs/fibca.jpg' %}" alt="FIBCA">
       <img src="{% static 'images/certs/efibca.jpg' %}" alt="EFIBCA">
@@ -409,6 +426,13 @@
       <img src="{% static 'images/certs/ifcba.jpg' %}" alt="IFCBA">
       <img src="{% static 'images/certs/brcs.jpg' %}" alt="BRCS">
       <img src="{% static 'images/certs/iso.jpg' %}" alt="ISO">
+      <!-- Optional: duplicate for smooth infinite loop -->
+      <img src="{% static 'images/certs/fibca.jpg' %}" alt="FIBCA Clone">
+      <img src="{% static 'images/certs/efibca.jpg' %}" alt="EFIBCA Clone">
+      <img src="{% static 'images/certs/tbpa.jpg' %}" alt="TBPA Clone">
+      <img src="{% static 'images/certs/ifcba.jpg' %}" alt="IFCBA Clone">
+      <img src="{% static 'images/certs/brcs.jpg' %}" alt="BRCS Clone">
+      <img src="{% static 'images/certs/iso.jpg' %}" alt="ISO Clone">
     </div>
   </div>
 </section>
