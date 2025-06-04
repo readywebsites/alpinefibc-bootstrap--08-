@@ -73,7 +73,3 @@ def pharma_grade_fibc_bags(request):
 
 def why_use_fibcs(request):
     return render(request, 'why-use-fibcs.html')
-
-def product_view(request):
-    return render(request, 'product.html')
-
