@@ -235,15 +235,4 @@ footer {
     .scrolling-logo-bar::-webkit-scrollbar-track {
       background: #f5f5f5;
     }
-    /* infrastructure hover */
-
-  .hover-effect {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
-
-  .hover-effect:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    z-index: 2;
-  }
   </style>
