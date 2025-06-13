@@ -15,14 +15,27 @@
 
   {% include 'base/footer.html' %}
 
+  <!-- Font Awesome (for social icons if used in header/footer) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
 
+  <!-- Dropdown Arrow + Toggle Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const link = document.querySelector('.hover-dropdown > a');
+      // Dropdown toggle arrow rotation
+      document.querySelectorAll('.nav-item.dropdown > a').forEach(el => {
+        el.addEventListener('click', function () {
+          const parent = this.closest('.dropdown');
+          setTimeout(() => {
+            parent.classList.toggle('show', this.getAttribute('aria-expanded') === 'true');
+          }, 150);
+        });
+      });
 
+      // Optional fix for special hover dropdown
+      const link = document.querySelector('.hover-dropdown > a');
       if (link) {
         link.addEventListener('click', function (e) {
           e.stopPropagation();
