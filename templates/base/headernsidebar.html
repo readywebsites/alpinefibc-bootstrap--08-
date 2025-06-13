@@ -152,3 +152,14 @@
     <i class="fab fa-linkedin-in"></i>
   </a>
 </div>
+<script>
+  // Handle arrow rotation on dropdown toggle
+  document.querySelectorAll('.nav-item.dropdown > a').forEach((el) => {
+    el.addEventListener('click', function (e) {
+      const parent = this.closest('.dropdown');
+      setTimeout(() => {
+        parent.classList.toggle('show', this.getAttribute('aria-expanded') === 'true');
+      }, 150);
+    });
+  });
+</script>
