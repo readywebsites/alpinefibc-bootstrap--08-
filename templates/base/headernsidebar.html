@@ -139,7 +139,7 @@
   </a>
 </div>
 
-<!-- JS to control dropdown toggle -->
+<!-- Dropdown JS -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const toggle = document.getElementById('productsDropdown');
@@ -152,27 +152,34 @@
 
       const isOpen = parent.classList.contains('show');
 
-      // Close all dropdowns first
+      // Close other open dropdowns
       document.querySelectorAll('.dropdown.show').forEach(d => {
         d.classList.remove('show');
         const m = d.querySelector('.dropdown-menu');
         if (m) m.classList.remove('show');
+        const t = d.querySelector('.dropdown-toggle');
+        if (t) t.setAttribute('aria-expanded', 'false');
       });
 
-      // Toggle current
+      // Toggle current dropdown
       if (!isOpen) {
         parent.classList.add('show');
         menu.classList.add('show');
+        toggle.setAttribute('aria-expanded', 'true');
+      } else {
+        parent.classList.remove('show');
+        menu.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
       }
     });
 
     // Close when clicking outside
-    document.addEventListener('click', function () {
-      document.querySelectorAll('.dropdown.show').forEach(d => {
-        d.classList.remove('show');
-        const m = d.querySelector('.dropdown-menu');
-        if (m) m.classList.remove('show');
-      });
+    document.addEventListener('click', function (e) {
+      if (!parent.contains(e.target)) {
+        parent.classList.remove('show');
+        menu.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
     });
   });
 </script>
