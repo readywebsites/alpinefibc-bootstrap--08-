@@ -63,11 +63,6 @@
   .social-sidebar i {
     font-size: 18px;
   }
-  .nav-item.dropdown > a:first-child {
-  border-right: 1px solid rgba(255,255,255,0.3);
-  margin-right: 3px;
-}
-
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -87,33 +82,27 @@
         <li class="nav-item"><a class="nav-link" href="{% url 'about_view' %}">About</a></li>
 
         <!-- Dropdown -->
-       <li class="nav-item dropdown position-relative d-flex align-items-center">
-  <!-- Main link (goes to products.html) -->
-  <a class="nav-link pe-1" href="{% url 'products' %}">Products</a>
-
-  <!-- Arrow (toggles dropdown only) -->
-  <a class="nav-link dropdown-toggle ps-1" href="#" id="productsDropdown" role="button">
-    <span class="toggle-sub-menu"></span>
-  </a>
-
-  <!-- Dropdown menu -->
-  <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-    <li><a class="dropdown-item" href="{% url 'u-panel-fibc' %}">U Panel FIBC</a></li>
-    <li><a class="dropdown-item" href="{% url 'circular-fibc' %}">Circular FIBC</a></li>
-    <li><a class="dropdown-item" href="{% url 'baffle-fibc-bags' %}">Baffle FIBC Bags</a></li>
-    <li><a class="dropdown-item" href="{% url 'un-fibc-bags' %}">UN FIBC Bags</a></li>
-    <li><a class="dropdown-item" href="{% url 'food-grade-fibc-bags' %}">Food Grade FIBC Bags</a></li>
-    <li><a class="dropdown-item" href="{% url 'ventilated-fibc-bags' %}">Ventilated FIBC Bags</a></li>
-    <li><a class="dropdown-item" href="{% url 'conductive-fibc-bags' %}">Conductive FIBC Bags</a></li>
-    <li><a class="dropdown-item" href="{% url 'fibc-liners' %}">FIBC Liners</a></li>
-    <li><a class="dropdown-item" href="{% url 'pp-woven-ground-cover' %}">PP Woven Ground Cover</a></li>
-    <li><a class="dropdown-item" href="{% url 'fibc-bags' %}">FIBC Bags</a></li>
-    <li><a class="dropdown-item" href="{% url 'dissipative-fibc-bags' %}">Dissipative FIBC Bags</a></li>
-    <li><a class="dropdown-item" href="{% url '4-panel-fibc-bags' %}">4 Panel FIBC Bags</a></li>
-    <li><a class="dropdown-item" href="{% url 'conical-fibc-bags' %}">Conical FIBC Bags</a></li>
-    <li><a class="dropdown-item" href="{% url 'pharma-grade-fibc-bags' %}">Pharma Grade FIBC Bags</a></li>
-  </ul>
-</li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button">
+            Products <span class="toggle-sub-menu"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+            <li><a class="dropdown-item" href="{% url 'u-panel-fibc' %}">U Panel FIBC</a></li>
+            <li><a class="dropdown-item" href="{% url 'circular-fibc' %}">Circular FIBC</a></li>
+            <li><a class="dropdown-item" href="{% url 'baffle-fibc-bags' %}">Baffle FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'un-fibc-bags' %}">UN FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'food-grade-fibc-bags' %}">Food Grade FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'ventilated-fibc-bags' %}">Ventilated FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'conductive-fibc-bags' %}">Conductive FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'fibc-liners' %}">FIBC Liners</a></li>
+            <li><a class="dropdown-item" href="{% url 'pp-woven-ground-cover' %}">PP Woven Ground Cover</a></li>
+            <li><a class="dropdown-item" href="{% url 'fibc-bags' %}">FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'dissipative-fibc-bags' %}">Dissipative FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url '4-panel-fibc-bags' %}">4 Panel FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'conical-fibc-bags' %}">Conical FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'pharma-grade-fibc-bags' %}">Pharma Grade FIBC Bags</a></li>
+          </ul>
+        </li>
 
         <li class="nav-item"><a class="nav-link" href="{% url 'quality' %}">Quality</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'infrastructure' %}">Infrastructure</a></li>
