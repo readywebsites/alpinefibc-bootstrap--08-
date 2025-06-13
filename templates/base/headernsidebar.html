@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 <style>
-  /* Custom arrow style */
   .toggle-sub-menu {
     margin-left: 5px;
     display: inline-block;
@@ -27,15 +26,13 @@
     transform: rotate(180deg);
   }
 
-  /* Optional: Hover show for desktop */
+  /* Disable hover dropdown */
   @media (min-width: 992px) {
     .navbar-nav .dropdown:hover .dropdown-menu {
-      display: block;
-      margin-top: 0;
+      display: none !important;
     }
   }
 
-  /* Social sidebar */
   .social-sidebar {
     position: fixed;
     top: 40%;
@@ -59,25 +56,12 @@
     opacity: 0.9;
   }
 
-  .social-sidebar a.whatsapp {
-    background-color: #25D366;
-  }
+  .social-sidebar a.whatsapp { background-color: #25D366; }
+  .social-sidebar a.facebook { background-color: #3b5998; }
+  .social-sidebar a.instagram { background-color: #E1306C; }
+  .social-sidebar a.linkedin { background-color: #0077b5; }
 
-  .social-sidebar a.facebook {
-    background-color: #3b5998;
-  }
-
-  .social-sidebar a.instagram {
-    background-color: #E1306C;
-  }
-
-  .social-sidebar a.linkedin {
-    background-color: #0077b5;
-  }
-
-  .social-sidebar i {
-    font-size: 18px;
-  }
+  .social-sidebar i { font-size: 18px; }
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
@@ -101,7 +85,7 @@
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button">
             Products <span class="toggle-sub-menu"></span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="productsDropdown">
@@ -156,45 +140,26 @@
 <!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Dropdown Fix Script -->
+<!-- Dropdown toggle script -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const dropdownToggles = document.querySelectorAll('.nav-item.dropdown > a');
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('productsDropdown');
+    const parent = toggle.closest('.dropdown');
 
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener('click', function (e) {
-        e.preventDefault();
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
 
-        const parent = this.closest('.dropdown');
+      const isOpen = parent.classList.contains('show');
+      document.querySelectorAll('.dropdown.show').forEach(d => d.classList.remove('show'));
 
-        // Close all others
-        document.querySelectorAll('.nav-item.dropdown.show').forEach(openItem => {
-          if (openItem !== parent) {
-            openItem.classList.remove('show');
-            openItem.querySelector('.dropdown-menu').classList.remove('show');
-            openItem.querySelector('a').setAttribute('aria-expanded', 'false');
-          }
-        });
-
-        const menu = parent.querySelector('.dropdown-menu');
-        const isOpen = parent.classList.contains('show');
-
-        parent.classList.toggle('show', !isOpen);
-        menu.classList.toggle('show', !isOpen);
-        this.setAttribute('aria-expanded', String(!isOpen));
-      });
+      if (!isOpen) {
+        parent.classList.add('show');
+      }
     });
 
-    // Close when clicked outside
-    document.addEventListener('click', function (event) {
-      const isDropdownClick = event.target.closest('.nav-item.dropdown');
-      if (!isDropdownClick) {
-        document.querySelectorAll('.nav-item.dropdown.show').forEach(dropdown => {
-          dropdown.classList.remove('show');
-          dropdown.querySelector('.dropdown-menu').classList.remove('show');
-          dropdown.querySelector('a').setAttribute('aria-expanded', 'false');
-        });
-      }
+    document.addEventListener('click', function () {
+      document.querySelectorAll('.dropdown.show').forEach(d => d.classList.remove('show'));
     });
   });
 </script>
