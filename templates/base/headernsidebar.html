@@ -21,10 +21,6 @@
     transform: rotate(180deg);
   }
 
-  .navbar-nav .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-
   .social-sidebar {
     position: fixed;
     top: 40%;
@@ -82,12 +78,8 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'home' %}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'about_view' %}">About</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'about_view' %}">About</a></li>
 
         <!-- Dropdown -->
         <li class="nav-item dropdown">
@@ -112,18 +104,10 @@
           </ul>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'quality' %}">Quality</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'infrastructure' %}">Infrastructure</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'certification' %}">Certification</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'quality' %}">Quality</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'infrastructure' %}">Infrastructure</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'certification' %}">Certification</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
       </ul>
     </div>
   </div>
@@ -152,7 +136,6 @@
 
       const isOpen = parent.classList.contains('show');
 
-      // Close other open dropdowns
       document.querySelectorAll('.dropdown.show').forEach(d => {
         d.classList.remove('show');
         const m = d.querySelector('.dropdown-menu');
@@ -161,7 +144,6 @@
         if (t) t.setAttribute('aria-expanded', 'false');
       });
 
-      // Toggle current dropdown
       if (!isOpen) {
         parent.classList.add('show');
         menu.classList.add('show');
@@ -173,7 +155,6 @@
       }
     });
 
-    // Close when clicking outside
     document.addEventListener('click', function (e) {
       if (!parent.contains(e.target)) {
         parent.classList.remove('show');
