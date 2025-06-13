@@ -1,5 +1,8 @@
 {% load static %}
 
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
 <style>
   .toggle-sub-menu {
     margin-left: 5px;
@@ -48,14 +51,6 @@
     background-color: #25D366;
   }
 
-  .social-sidebar a.facebook {
-    background-color: #3b5998;
-  }
-
-  .social-sidebar a.instagram {
-    background-color: #E1306C;
-  }
-
   .social-sidebar a.linkedin {
     background-color: #0077b5;
   }
@@ -65,12 +60,11 @@
   }
 </style>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
   <div class="container">
     <a class="navbar-brand" href="{% url 'home' %}">
-      <img src="{% static 'images/shri.webp' %}" alt="Alpine FIBC" height="60" class="me-2">
+      <img src="{% static 'images/shri.webp' %}" alt="Shri Khemisati Pvt Ltd" height="60" class="me-2">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -81,9 +75,9 @@
         <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'about_view' %}">About</a></li>
 
-        <!-- Dropdown -->
+        <!-- Dropdown Products -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button">
+          <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" aria-expanded="false">
             Products <span class="toggle-sub-menu"></span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="productsDropdown">
@@ -123,7 +117,7 @@
   </a>
 </div>
 
-<!-- Dropdown JS -->
+<!-- Dropdown JS Logic -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const toggle = document.getElementById('productsDropdown');
