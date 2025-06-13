@@ -81,16 +81,17 @@
         <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'about_view' %}">About</a></li>
 
-       <li class="nav-item dropdown d-flex align-items-center">
-  <!-- 🔹 Text part opens products.html -->
-  <a class="nav-link" href="{% url 'products' %}">
-    Products
+        <!-- Dropdown -->
+       <li class="nav-item dropdown position-relative d-flex align-items-center">
+  <!-- Main link (goes to products.html) -->
+  <a class="nav-link pe-1" href="{% url 'products' %}">Products</a>
+
+  <!-- Arrow (toggles dropdown only) -->
+  <a class="nav-link dropdown-toggle ps-1" href="#" id="productsDropdown" role="button">
+    <span class="toggle-sub-menu"></span>
   </a>
 
-  <!-- 🔸 Arrow opens dropdown -->
-  <a class="nav-link dropdown-toggle ps-1" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-
-  <!-- 🔻 Dropdown Menu -->
+  <!-- Dropdown menu -->
   <ul class="dropdown-menu" aria-labelledby="productsDropdown">
     <li><a class="dropdown-item" href="{% url 'u-panel-fibc' %}">U Panel FIBC</a></li>
     <li><a class="dropdown-item" href="{% url 'circular-fibc' %}">Circular FIBC</a></li>
