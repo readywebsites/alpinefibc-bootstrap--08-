@@ -24,10 +24,13 @@
     transform: rotate(180deg);
   }
 
-  /* Optional: Adjust dropdown hover effect */
+  /* Remove hover-to-open to prevent conflict with click */
+  /* Optional: If you still want hover behavior, let me know */
+  /*
   .navbar-nav .dropdown:hover .dropdown-menu {
     display: block;
   }
+  */
 
   /* Social sidebar styles */
   .social-sidebar {
@@ -131,13 +134,10 @@
           <a class="nav-link" href="{% url 'certification' %}">Certification</a>
         </li>
 
-       
-
         <li class="nav-item">
           <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
         </li>
 
-       
       </ul>
     </div>
   </div>
@@ -148,21 +148,7 @@
   <a href="https://wa.me/919820123033" class="whatsapp" target="_blank" title="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
- 
-  
-<a href="https://www.linkedin.com/company/87458162/" class="linkedin" target="_blank" title="LinkedIn">
+  <a href="https://www.linkedin.com/company/87458162/" class="linkedin" target="_blank" title="LinkedIn">
     <i class="fab fa-linkedin-in"></i>
   </a>
 </div>
-
-<script>
-  // Handle arrow rotation on dropdown toggle
-  document.querySelectorAll('.nav-item.dropdown > a').forEach((el) => {
-    el.addEventListener('click', function (e) {
-      const parent = this.closest('.dropdown');
-      setTimeout(() => {
-        parent.classList.toggle('show', this.getAttribute('aria-expanded') === 'true');
-      }, 150);
-    });
-  });
-</script>
