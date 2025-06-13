@@ -1,11 +1,7 @@
 {% load static %}
 
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
 <style>
+  /* Custom arrow style */
   .toggle-sub-menu {
     margin-left: 5px;
     display: inline-block;
@@ -18,21 +14,22 @@
     transition: transform 0.3s ease;
   }
 
+  /* Hide default Bootstrap arrow */
   .dropdown-toggle::after {
     display: none !important;
   }
 
+  /* Rotate arrow when dropdown is open */
   .dropdown.show .toggle-sub-menu {
     transform: rotate(180deg);
   }
 
-  /* Disable hover dropdown */
-  @media (min-width: 992px) {
-    .navbar-nav .dropdown:hover .dropdown-menu {
-      display: none !important;
-    }
+  /* Optional: Adjust dropdown hover effect */
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
   }
 
+  /* Social sidebar styles */
   .social-sidebar {
     position: fixed;
     top: 40%;
@@ -56,13 +53,29 @@
     opacity: 0.9;
   }
 
-  .social-sidebar a.whatsapp { background-color: #25D366; }
-  .social-sidebar a.facebook { background-color: #3b5998; }
-  .social-sidebar a.instagram { background-color: #E1306C; }
-  .social-sidebar a.linkedin { background-color: #0077b5; }
+  .social-sidebar a.whatsapp {
+    background-color: #25D366;
+  }
 
-  .social-sidebar i { font-size: 18px; }
+  .social-sidebar a.facebook {
+    background-color: #3b5998;
+  }
+
+  .social-sidebar a.instagram {
+    background-color: #E1306C;
+  }
+
+  .social-sidebar a.linkedin {
+    background-color: #0077b5;
+  }
+
+  .social-sidebar i {
+    font-size: 18px;
+  }
 </style>
+
+<!-- Font Awesome (for social icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
   <div class="container">
@@ -85,7 +98,7 @@
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button">
+          <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products <span class="toggle-sub-menu"></span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="productsDropdown">
@@ -118,10 +131,13 @@
           <a class="nav-link" href="{% url 'certification' %}">Certification</a>
         </li>
 
+       
+
         <li class="nav-item">
           <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
         </li>
 
+       
       </ul>
     </div>
   </div>
@@ -132,34 +148,21 @@
   <a href="https://wa.me/919820123033" class="whatsapp" target="_blank" title="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
-  <a href="https://www.linkedin.com/company/87458162/" class="linkedin" target="_blank" title="LinkedIn">
+ 
+  
+<a href="https://www.linkedin.com/company/87458162/" class="linkedin" target="_blank" title="LinkedIn">
     <i class="fab fa-linkedin-in"></i>
   </a>
 </div>
 
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Dropdown toggle script -->
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.getElementById('productsDropdown');
-    const parent = toggle.closest('.dropdown');
-
-    toggle.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      const isOpen = parent.classList.contains('show');
-      document.querySelectorAll('.dropdown.show').forEach(d => d.classList.remove('show'));
-
-      if (!isOpen) {
-        parent.classList.add('show');
-      }
-    });
-
-    document.addEventListener('click', function () {
-      document.querySelectorAll('.dropdown.show').forEach(d => d.classList.remove('show'));
+  // Handle arrow rotation on dropdown toggle
+  document.querySelectorAll('.nav-item.dropdown > a').forEach((el) => {
+    el.addEventListener('click', function (e) {
+      const parent = this.closest('.dropdown');
+      setTimeout(() => {
+        parent.classList.toggle('show', this.getAttribute('aria-expanded') === 'true');
+      }, 150);
     });
   });
 </script>
