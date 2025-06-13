@@ -1,8 +1,7 @@
 {% load static %}
-<!-- Font Awesome (for social icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 <style>
+  /* Custom arrow style */
   .toggle-sub-menu {
     margin-left: 5px;
     display: inline-block;
@@ -15,14 +14,22 @@
     transition: transform 0.3s ease;
   }
 
+  /* Hide default Bootstrap arrow */
   .dropdown-toggle::after {
     display: none !important;
   }
 
+  /* Rotate arrow when dropdown is open */
   .dropdown.show .toggle-sub-menu {
     transform: rotate(180deg);
   }
 
+  /* Optional: Adjust dropdown hover effect */
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  /* Social sidebar styles */
   .social-sidebar {
     position: fixed;
     top: 40%;
@@ -46,9 +53,29 @@
     opacity: 0.9;
   }
 
-  .social-sidebar a.whatsapp { background-color: #25D366; }
-  .social-sidebar a.linkedin { background-color: #0077b5; }
+  .social-sidebar a.whatsapp {
+    background-color: #25D366;
+  }
+
+  .social-sidebar a.facebook {
+    background-color: #3b5998;
+  }
+
+  .social-sidebar a.instagram {
+    background-color: #E1306C;
+  }
+
+  .social-sidebar a.linkedin {
+    background-color: #0077b5;
+  }
+
+  .social-sidebar i {
+    font-size: 18px;
+  }
 </style>
+
+<!-- Font Awesome (for social icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
   <div class="container">
@@ -62,26 +89,55 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
 
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'about_view' %}">About</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about_view' %}">About</a>
+        </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products <span class="toggle-sub-menu"></span>
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" aria-labelledby="productsDropdown">
             <li><a class="dropdown-item" href="{% url 'u-panel-fibc' %}">U Panel FIBC</a></li>
             <li><a class="dropdown-item" href="{% url 'circular-fibc' %}">Circular FIBC</a></li>
             <li><a class="dropdown-item" href="{% url 'baffle-fibc-bags' %}">Baffle FIBC Bags</a></li>
-            <!-- Add more links here -->
+            <li><a class="dropdown-item" href="{% url 'un-fibc-bags' %}">UN FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'food-grade-fibc-bags' %}">Food Grade FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'ventilated-fibc-bags' %}">Ventilated FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'conductive-fibc-bags' %}">Conductive FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'fibc-liners' %}">FIBC Liners</a></li>
+            <li><a class="dropdown-item" href="{% url 'pp-woven-ground-cover' %}">PP Woven Ground Cover</a></li>
+            <li><a class="dropdown-item" href="{% url 'fibc-bags' %}">FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'dissipative-fibc-bags' %}">Dissipative FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url '4-panel-fibc-bags' %}">4 Panel FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'conical-fibc-bags' %}">Conical FIBC Bags</a></li>
+            <li><a class="dropdown-item" href="{% url 'pharma-grade-fibc-bags' %}">Pharma Grade FIBC Bags</a></li>
           </ul>
         </li>
 
-        <li class="nav-item"><a class="nav-link" href="{% url 'quality' %}">Quality</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'infrastructure' %}">Infrastructure</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'certification' %}">Certification</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'quality' %}">Quality</a>
+        </li>
 
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'infrastructure' %}">Infrastructure</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'certification' %}">Certification</a>
+        </li>
+
+       
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+        </li>
+
+       
       </ul>
     </div>
   </div>
@@ -92,7 +148,21 @@
   <a href="https://wa.me/919820123033" class="whatsapp" target="_blank" title="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
-  <a href="https://www.linkedin.com/company/87458162/" class="linkedin" target="_blank" title="LinkedIn">
+ 
+  
+<a href="https://www.linkedin.com/company/87458162/" class="linkedin" target="_blank" title="LinkedIn">
     <i class="fab fa-linkedin-in"></i>
   </a>
 </div>
+
+<script>
+  // Handle arrow rotation on dropdown toggle
+  document.querySelectorAll('.nav-item.dropdown > a').forEach((el) => {
+    el.addEventListener('click', function (e) {
+      const parent = this.closest('.dropdown');
+      setTimeout(() => {
+        parent.classList.toggle('show', this.getAttribute('aria-expanded') === 'true');
+      }, 150);
+    });
+  });
+</script>
