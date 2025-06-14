@@ -39,52 +39,19 @@ urlpatterns = [
 
     # Product Detail Pages (both clean and .html)
     path('u-panel-fibc/', views.u_panel_fibc, name='u_panel_fibc'),
-    path('u-panel-fibc.html', views.u_panel_fibc),
-
-
-    path('un-fibc-bags/', views.un_fibc_bags, name='un_fibc_bags'),
-    path('un-fibc-bags.html', views.un_fibc_bags, name='un_fibc_bags_html'),
-
     path('circular-fibc/', views.circular_fibc, name='circular_fibc'),
-    path('circular-fibc.html', views.circular_fibc),
-
-
-
     path('baffle-fibc-bags/', views.baffle_fibc_bags, name='baffle_fibc_bags'),
-    path('baffle-fibc-bags.html', views.baffle_fibc_bags, name='baffle_fibc_bags_html'),
-
+    path('un-fibc-bags/', views.un_fibc_bags, name='un_fibc_bags'),
     path('food-grade-fibc-bags/', views.food_grade_fibc_bags, name='food_grade_fibc_bags'),
-    path('food-grade-fibc-bags.html', views.food_grade_fibc_bags, name='food_grade_fibc_bags_html'),
-
     path('ventilated-fibc-bags/', views.ventilated_fibc_bags, name='ventilated_fibc_bags'),
-    path('ventilated-fibc-bags.html', views.ventilated_fibc_bags, name='ventilated_fibc_bags_html'),
-
     path('conductive-fibc-bags/', views.conductive_fibc_bags, name='conductive_fibc_bags'),
-    path('conductive-fibc-bags.html', views.conductive_fibc_bags, name='conductive_fibc_bags_html'),
-
     path('fibc-liners/', views.fibc_liners, name='fibc_liners'),
-    path('fibc-liners.html', views.fibc_liners, name='fibc_liners_html'),
-
     path('pp-woven-ground-cover/', views.pp_woven_ground_cover, name='pp_woven_ground_cover'),
-    path('pp-woven-ground-cover.html', views.pp_woven_ground_cover, name='pp_woven_ground_cover_html'),
-
     path('fibc-bags/', views.fibc_bags, name='fibc_bags'),
-    path('fibc-bags.html', views.fibc_bags, name='fibc_bags_html'),
-
     path('dissipative-fibc-bags/', views.dissipative_fibc_bags, name='dissipative_fibc_bags'),
-    path('dissipative-fibc-bags.html', views.dissipative_fibc_bags, name='dissipative_fibc_bags_html'),
-
     path('4-panel-fibc-bags/', views.four_panel_fibc_bags, name='four_panel_fibc_bags'),
-    path('4-panel-fibc-bags.html', views.four_panel_fibc_bags, name='four_panel_fibc_bags_html'),
-
     path('conical-fibc-bags/', views.conical_fibc_bags, name='conical_fibc_bags'),
-    path('conical-fibc-bags.html', views.conical_fibc_bags, name='conical_fibc_bags_html'),
-
     path('pharma-grade-fibc-bags/', views.pharma_grade_fibc_bags, name='pharma_grade_fibc_bags'),
-    path('pharma-grade-fibc-bags.html', views.pharma_grade_fibc_bags, name='pharma_grade_fibc_bags_html'),
-
-    path('why-use-fibcs/', views.why_use_fibcs, name='why_use_fibcs'),
-    path('why-use-fibcs.html', views.why_use_fibcs, name='why_use_fibcs_html'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
