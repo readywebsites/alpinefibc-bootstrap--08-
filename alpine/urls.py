@@ -11,8 +11,8 @@ urlpatterns = [
     path('index.html', views.home, name='home_html'),
 
     # Static Pages
+    path('about/', views.about_view, name='about_view'),         # for {% url 'about_view' %}
     path('about.html', views.about_view, name='about_html'),
-    path('about/', views.about_view, name='about_clean'),
 
     path('products.html', views.products, name='products_html'),
     path('products/', views.products, name='products_clean'),
