@@ -38,8 +38,8 @@ urlpatterns = [
     path('career.html', views.career, name='career_html'),
 
     # Product Detail Pages (both clean and .html)
+    path('u-panel-fibc/', views.u_panel_fibc), 
     path('u-panel-fibc.html', views.u_panel_fibc, name='u_panel_fibc'),
-    path('u-panel-fibc/', views.u_panel_fibc),  # no name
 
 
     path('un-fibc-bags/', views.un_fibc_bags, name='un_fibc_bags'),
