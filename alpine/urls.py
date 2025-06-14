@@ -45,8 +45,9 @@ urlpatterns = [
     path('un-fibc-bags/', views.un_fibc_bags, name='un_fibc_bags'),
     path('un-fibc-bags.html', views.un_fibc_bags, name='un_fibc_bags_html'),
 
-    path('circular-fibc/', views.circular_fibc, name='circular_fibc'),
-    path('circular-fibc.html', views.circular_fibc, name='circular_fibc_html'),
+    path('circular-fibc.html', views.circular_fibc, name='circular_fibc'),
+    path('circular-fibc/', views.circular_fibc),  # optional: for fallback
+
 
     path('baffle-fibc-bags/', views.baffle_fibc_bags, name='baffle_fibc_bags'),
     path('baffle-fibc-bags.html', views.baffle_fibc_bags, name='baffle_fibc_bags_html'),
