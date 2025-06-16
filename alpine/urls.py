@@ -37,6 +37,11 @@ urlpatterns = [
     path('career/', views.career, name='career'),
     path('career.html', views.career, name='career_html'),
 
+    # Why Use FIBCs page
+    path('why-use-fibcs/', views.why_use_fibcs, name='why_use_fibcs'),
+    path('why-use-fibcs.html', views.why_use_fibcs),  # Optional if you want `.html` access
+  
+
     # Product Detail Pages (both clean and .html)
     path('u-panel-fibc/', views.u_panel_fibc, name='u_panel_fibc'),
     path('circular-fibc/', views.circular_fibc, name='circular_fibc'),
